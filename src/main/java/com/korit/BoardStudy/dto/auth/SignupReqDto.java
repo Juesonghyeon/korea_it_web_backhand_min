@@ -12,7 +12,7 @@ public class SignupReqDto {
     private String password;
     private String email;
 
-    public User toEntity(BCryptPasswordEncoder bCryptPasswordEncoder){
+    public User toEntity(BCryptPasswordEncoder bCryptPasswordEncoder) {
         return User.builder()
                 .username(username)
                 .password(bCryptPasswordEncoder.encode(password))
